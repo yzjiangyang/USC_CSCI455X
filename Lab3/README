@@ -1,0 +1,57 @@
+Name:
+USC NetID:
+CSCI 455 Spring 2021
+Lab 3
+
+Note: On-campus students can put their answers to the lab questions in this file, or in a text file created in another text editor, or use a piece of paper they can show to their lab TA.  DEN students will need to put their answers in this README, so they will get submitted.
+
+
+Question 1.1
+puchase = 0 + 0.75 + 1.5 = 2.25
+payment = 2 + 0 * 0.25 + 5 * 0.1 + 0 * 0.05 + 0 * 0.01 = 2.5
+change = payment - purchase = 2.5 - 2.25 = 0.25
+
+Question 1.2
+
+
+Question 2.1
+Output is 0.65 now, which is correct.
+
+Question 3.1
+Staring from directory ex2
+Command:
+mkdir ../ex3
+cp CashReg* ../ex3
+
+Question 4.1
+Except the first print (Total: 4.35 Expected: 4.35). All other results don't match the expected output.
+
+Total: 4.35                                                                                                                                                                     
+Expected: 4.35                                                                                                                                                                  
+                                                                                                                                                                                
+Payment given: Change[dollars=5,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                         
+Change[dollars=0,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                                        
+Change total: 0.0                                                                                                                                                               
+Expected: 0.65                                                                                                                                                                  
+                                                                                                                                                                                
+Total: 5.1                                                                                                                                                                      
+Expected: 0.75                                                                                                                                                                  
+                                                                                                                                                                                
+Total: 6.6                                                                                                                                                                      
+Expected: 2.25                                                                                                                                                                  
+                                                                                                                                                                                
+Payment given: Change[dollars=2,quarters=0,dimes=5,nickels=0,pennies=0]                                                                                                         
+Change[dollars=0,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                                        
+Change total: 0.0                                                                                                                                                               
+Expected: 0.25                                                                                                                                                                  
+                                                                                                                                                                                
+Total: 8.85                                                                                                                                                                     
+Expected: 2.25                                                                                                                                                                  
+                                                                                                                                                                                
+Total: 28.1                                                                                                                                                                     
+Expected: 21.5                                                                                                                                                                  
+                                                                                                                                                                                
+Payment given: Change[dollars=23,quarters=2,dimes=0,nickels=0,pennies=0]                                                                                                        
+Change[dollars=0,quarters=0,dimes=0,nickels=0,pennies=0]                                                                                                                        
+Change total: 0.0                                                                                                                                                               
+Expected: 2.0 
