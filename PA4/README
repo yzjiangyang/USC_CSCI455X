@@ -1,0 +1,73 @@
+Name: Yang Jiang
+USC NetID: yjiang24
+CS 455 PA4
+Spring 2021
+
+----------------------------------------------
+CERTIFY IT'S YOUR WORK
+
+"I certify that the work submitted for this assignment does not
+violate USC's student conduct code.  In particular, the work is my
+own, not a collaboration, and does not involve code created by other
+people, except for the the resources explicitly mentioned in the CS 455
+Course Syllabus.  And I did not share my solution or parts of it with
+other students in the course."
+
+Initial below to "sign" the above statement:
+YJ
+
+----------------------------------------------
+ACKNOWLEDGE ANY OUTSIDE SOURCES
+
+List here any code you submitted for this assignment that was written
+with significant help of a course staff member, or code used from the
+textbook.  Be specific about what methods or algorithms are involved,
+and what sections of the textbook are involved (if applicable): [you do
+not need to list any of the code that we wrote for the assignment,
+i.e., the contents of the starter files for the assignment]
+
+
+
+----------------------------------------------
+KNOWN BUGS or LIMITATIONS:
+
+
+
+----------------------------------------------
+DESCRIPTION OF YOUR CLASS DESIGN AND ALGORITHMS AND DATA STRUCTURES USED:
+1. AnagramDictionary.java: 
+	* Constructor AnagramDictionary: It uses HashMap and ArrayList. The keys in the HashMap are sorted words, and the values of the HashMap are ArrayLists that have the word's anagrams. It reads all the words from a dictionary file (throws FileNotFoundException if the file does not exist), and then puts the sorted word as the key to the HashMap if the sorted word does not exist in HashMap, and then put the word to an ArrayList as the key's corresponding value. If there are duplicated words in the dictionaty file, it throws IllegalDictionaryException.
+	
+	* Method getAnagramsOf: It returns an ArrayList that has the anagrams of the sored word. This method uses ArrayList only.
+	
+	* Method canonicalForm: This method sorts the word in ascending order. In order to sort the word, this method uses Array data structure(convert string to an array, and then sort the array in ascending order).
+
+2. Rack.java:
+	* Method getCharCountMap: This method helps to get a HashMap, which has each letter of the input word as the key, and its corresponding frequency as the value. It converts the word to an Array, and then for each letter in the Array, calculate its frequency. It puts letters as keys to the HashMap, and their frequencies as the values to the HashMap. Therefore, this method uses HashMap and Array.
+	
+	* Method getAllSubsets: This method utlizes the getCharCountMap method to get the string of unique letters and the Array that is used to store the multiplicity of each letter from unique letters, and then pass the unique letters and Array to the method allSubsets to get subsets. To get the multiplicity of each letter from unique letters, we create an Array called mult to store each letter's frequency, so this method uses Array data structure.
+
+3. ScoreTable:
+	* Constructor ScoreTable: It uses an Array called scoreArray to store each letter's weight. It nees the help of the ASCII code to get the index of each letter(ASCII code - 'A' is the index of 'A'). So it uses Array data structure.
+
+	* Method getScore: This method helps get the score of a word (no matter it is lowecase or uppercase). Since I use all uppercases in the constructor to get each letter's weight, I convert the input word to uppercase, and then calculate its score.
+
+4. WordFinder:
+	* This is the main class for the scrabble program. If the dictionary file is not found, it catches the FileNotFoundException, prints corresponding error messages, and exits the program immediately. If the dictionary file has duplicate words in it, it catches the IllegalDictionaryException, prints corresponding error messages, and exits the program immediately. If there is no exception, print the sorted results, score and anagram.
+
+	* Method getAnagramsScoreMap: This method gets the TreeMap which has all anagrams of all the resonable subsets of the word and their scores. It uses an ArrayList data structure called subsets to store subsets of the rack and uses another ArrayList data structure called anagramsArray to store all the anagram of a subset. It utlizes ScoreTable to calculate each anagram's score, and then puts each anagram as the key and its score as the value to the TreeMap called anagramsScoreMap. So this method uses ArrayList and TreeMap.
+
+	* Method getDescendingAnagramsScoreMap: This method helps sort the the anagramsScoreMap in descending order by the scores of words. It implements an interface comparator and overrides the compare method and created an ArrayList called mapEntryArray to store the entrySet of the anagramsScoreMap, and then sort the ArrayList mapEntryArray with the help of comparator. So this method uses ArrayList.
+
+	* Method printSortedValue: This method prints the sorted results, score and anagram.
+
+
+----------------------------------------------
+ANY OTHER NOTES FOR THE GRADER:
+
+
+
+
+
+
+
